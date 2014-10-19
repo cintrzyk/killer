@@ -1,0 +1,28 @@
+<h1>Assassins</h1>
+<% if @assassins.any? %>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @assassins.each_with_index do |assassin, index| %>
+        <tr>
+          <td><%= "##{index + 1} assassin" %></td>
+          <td><%= link_to 'Expose', assassin %></td>
+          <td><%= link_to 'Change personality', edit_assassin_path(assassin) %></td>
+          <td><%= link_to 'Kill', assassin, method: :delete, data: { confirm: 'Are you out of your freaking mind??!!?!?!!??' }, class: "red" %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% else %>
+  <p> No more killing...</p>
+<% end %>
+
+<br>
+
+<%= link_to 'Hire Assassin!', new_assassin_path %>
