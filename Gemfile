@@ -9,10 +9,14 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder'
+# gem 'capistrano', '~> 3.1'
+# gem 'capistrano-rails'
+# gem 'capistrano-rbenv', '~> 2.0'
 
 group :development do
   gem 'spring'
-  # gem 'capistrano', '~> 3.1'
-  # gem 'capistrano-rails'
-  # gem 'capistrano-rbenv', '~> 2.0'
 end
+
+# group :production do
+#   gem 'unicorn', '4.8.3'
+# end
